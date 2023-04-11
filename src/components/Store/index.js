@@ -7,7 +7,7 @@ export default function Index() {
   const [products, setProducts] = useState([]);
   
   const providers = useSelector(state => state.providers.providers);
-  console.log(providers);
+  console.log("from store",providers);
 
   async function getProductsApi() {
     try {
