@@ -1,8 +1,12 @@
 import React,{useState} from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { addProvider } from "../../Service/providers";
+import { addProviderJson } from "../../Service/providers";
+import { useDispatch } from 'react-redux';
+import { addProvider } from '../../redux/slices/ProviderSlice';
+
 export default function ProviderForm() {
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
@@ -17,7 +21,8 @@ export default function ProviderForm() {
       email: email,
     };
     console.log(Provider);
-    addProvider(Provider);
+    addProviderJson(Provider);
+    dispatch(addProvider(Provider));
    
     setName('');
     setAddress('');
