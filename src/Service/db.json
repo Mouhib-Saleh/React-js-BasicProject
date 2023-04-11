@@ -1,25 +1,41 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Phone",
-        "description": "This is a Phone",
-        "image" :"https://res.cloudinary.com/dnnhnqiym/image/upload/v1670775447/osg553vsqxf39qpt5hs3.png",
-        "price": 10.99
-      },
-      {
-        "id": 2,
-        "name": "Keyboard",
-        "description": "This is Keyboard",
-        "image" :"https://res.cloudinary.com/dnnhnqiym/image/upload/v1671026755/dhab6ffrk63ajri3oqu3.png",
-        "price": 19.99
-      },
-      {
-        "id": 3,
-        "name": "Controller",
-        "description": "This is a Controller",
-        "image" :"https://res.cloudinary.com/dnnhnqiym/image/upload/v1670779686/sovuquybezftxzb3dm0n.png",
-        "price": 24.99
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": 1,
+      "name": "Phone",
+      "description": "This is a Phone",
+      "image": "https://res.cloudinary.com/dnnhnqiym/image/upload/v1670775447/osg553vsqxf39qpt5hs3.png",
+      "price": 10.99
+    },
+    {
+      "id": 2,
+      "name": "Keyboard",
+      "description": "This is Keyboard",
+      "image": "https://res.cloudinary.com/dnnhnqiym/image/upload/v1671026755/dhab6ffrk63ajri3oqu3.png",
+      "price": 19.99
+    },
+    {
+      "id": 3,
+      "name": "Controller",
+      "description": "This is a Controller",
+      "image": "https://res.cloudinary.com/dnnhnqiym/image/upload/v1670779686/sovuquybezftxzb3dm0n.png",
+      "price": 24.99
+    }
+  ],
+  "providers": [
+    {
+      "name": "sdd",
+      "address": "sdd",
+      "phone": "28880541",
+      "email": "event?.@jgh",
+      "id": 1
+    },
+    {
+      "name": "sdddsdsdsdsdsd",
+      "address": "sdd",
+      "phone": "28880541",
+      "email": "event?.@jgh",
+      "id": 2
+    }
+  ]
+}
