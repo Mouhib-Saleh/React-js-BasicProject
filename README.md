@@ -7,9 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start`
-
+also npm run server to start the json server
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![image](https://user-images.githubusercontent.com/58568739/231270039-ea07ef6f-5d3a-4330-8b3c-ad35b9feddd3.png)
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
