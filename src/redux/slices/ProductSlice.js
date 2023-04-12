@@ -1,45 +1,33 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  products: []
+  Wishlist: []
 };
 
-const ProductSlice = createSlice({
-  name: 'products',
+const WishlistSlice = createSlice({
+  name: 'wishlist',
   initialState,
   reducers: {  
-    addProdcut: (state, action ) => {
+    addMovieToWishlist: (state, action ) => {
        
         return {
             ...state,
-            products: [...state.products, action.payload]
+            Wishlist: [...state.Wishlist, action.payload]
           };
           
       },
-      removeProduct: (state, action) => {
-        const updatedProduct = state.products.filter(product => product.id !== action.payload);
+      removefromWishlist: (state, action) => {
+        const updatedWishlist = state.Wishlist.filter(wishlist => wishlist.id !== action.payload);
         return {
           ...state,
-          products: updatedProduct
+          Wishlist: updatedWishlist
         };
       },
-      Increment: (state, action) => {
-        state.products[0].map((product) => {
-          if (product.id === action.payload) {
-            product.count = product.count + 1;
-          }
-        });
-      },
-      Decrement: (state, action) => {
-        state.products.map((product) => {
-          if (product.id === action.payload) {
-            product.count = product.count - 1;
-          }
-        });
-      },
+      
+    
       
   }
 });
 
-export const { addProdcut, removeProduct ,Increment} = ProductSlice.actions;
-export default ProductSlice.reducer;
+export const { addMovieToWishlist, removeMovieFromWishList } = WishlistSlice.actions;
+export default WishlistSlice.reducer;
