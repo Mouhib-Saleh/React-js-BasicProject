@@ -1,13 +1,9 @@
 import React,{useEffect, useState} from 'react'
 import Products from "./Products";
 import { getProducts } from "../../Service/products";
-import { useSelector } from 'react-redux';
 
 export default function Index() {
   const [products, setProducts] = useState([]);
-  
-  const providers = useSelector(state => state.providers.providers);
-  console.log(providers);
 
   async function getProductsApi() {
     try {
