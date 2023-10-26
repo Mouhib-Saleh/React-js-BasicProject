@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import providersReducer from './slices/ProviderSlice';
-import WishListReducer from './slices/ProductSlice';
+import productsReducer from './slices/ProductSlice';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { createSerializableStateInvariantMiddleware } from '@reduxjs/toolkit';
@@ -11,7 +11,7 @@ const persistConfig = {
     
   };
   const persistedReducerProvider = persistReducer(persistConfig,providersReducer );
-  const persistedReducerProduct = persistReducer(persistConfig,WishListReducer );
+  const persistedReducerProduct = persistReducer(persistConfig,productsReducer );
 const store = configureStore({
   reducer: {
     providers: persistedReducerProvider ,
