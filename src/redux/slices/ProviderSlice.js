@@ -1,14 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+
 const initialState = {
   providers: [{"name":"test","address":"test","phone":"test","email":"test"}]
 };
-const persistConfig = {
-    key: 'root',
-    storage,
-    whitelist: ['providers']
-  };
+
 const providersSlice = createSlice({
   name: 'providers',
   initialState,
@@ -16,21 +11,17 @@ const providersSlice = createSlice({
     addProvider: (state, action) => {
         console.log("payload is "  ,action.payload);
         console.log("state is " , state.providers);
-        
-        return {
-            ...state,
-            providers: [...state.providers, action.payload]
-          };
-      },
-      removeProvider: (state, action) => {
-        const updatedProviders = state.providers.filter(provider => provider.id !== action.payload);
-        return {
+        //state.providers.push(action.payload)
+        /* return {
           ...state,
-          providers: updatedProviders
-        };
-      }
+          providers: [...state.providers , action.payload]
+        }; */
+      },
+    removeProvider: (state, action) => {
+      state.providers = state.providers.filter(provider => provider.id !== action.payload);
+    }
   }
 });
-const persistedReducer = persistReducer(persistConfig, providersSlice.reducer);
+
 export const { addProvider, removeProvider } = providersSlice.actions;
-export default persistedReducer;
+export default providersSlice.reducer;
