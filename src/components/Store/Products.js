@@ -2,6 +2,7 @@ import React from 'react'
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { DeleteProduct } from '../../Service/products';
 
 export default function Store(props) {
   
@@ -27,14 +28,16 @@ export default function Store(props) {
         boxShadow: '0 0 10px rgba(0,0,0,0.3)'
       }} />
       <Card.Body>
-        <Card.Title>{product.name}</Card.Title>
+        <Card.Title>{product.label}</Card.Title>
         <Card.Text>
         {product.description}
         </Card.Text>
         <Card.Text>
-        ${product.price}
+        ${product.id}
         </Card.Text>
-        <Button variant="primary">Buy</Button>
+        <Button variant="danger" onClick={()=>DeleteProduct(product.id)}>Delete</Button>
+        <Button variant="primary" >Update</Button>
+
       </Card.Body>
     </Card>
     

@@ -38,7 +38,7 @@ export default function ProviderForm() {
       >
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Label</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter name"
